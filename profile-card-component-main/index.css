@@ -1,0 +1,162 @@
+/*
+ #333 - dark gray
+ #fff - white
+ #000 - black
+ #ccc - lightgrey
+ #ff0 - yellow
+ #ff0000 - red
+ #00ff00 - green
+ #0000ff - blue
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: hsl(185, 75%, 39%);
+  background-image: url("./images/bg-pattern-top.svg"),
+  url("./images/bg-pattern-bottom.svg");
+  /* background-size: 500px 500px, 500px 500px; */
+  background-position: left -280px top -580px, right -250px bottom -650px;
+  background-repeat: no-repeat, no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+.box {
+  /* border: 1px solid #ccc; */
+  height: 350px;
+  width: 350px;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: column;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 4px 8px 40px -10px var(--very-dark-desaturated-blue);
+}
+
+.pattern {
+  border-radius: 15px 15px 0px 0px;
+  background: url(images/bg-pattern-card.svg) no-repeat;
+  background-size: cover;
+  flex: 1.7;
+  width: 100%;
+  position: relative;
+}
+
+.pattern img {
+  border-radius: 50% 50% 50% 50%;
+  border: 5px solid #fff;
+  position: absolute;
+  left: 35%;
+  top: 58%;
+  z-index: 99;
+}
+
+.profile {
+  flex: 2.3;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile .name {
+    margin-top: 40px;
+}
+.profile p {
+  padding: 0;
+  margin: 0;
+}
+
+.stats {
+  border-top: 1px solid #ccc;
+  border-radius: 0px 0px 15px 15px;
+  flex: 1;
+  background: #fff;
+}
+
+nav ul {
+  /* margin: 0; */
+  padding: 0;
+
+  list-style: none;
+  /* border: 1px solid red; */
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.stats nav ul li {
+  /* border: 1px solid red; */
+  display: inline;
+}
+
+.followers,
+.likes,
+.photos {
+  position: relative;
+  font-weight: 700;
+}
+
+.followers::before {
+  content: "Followers";
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: #ccc;
+}
+
+.likes::before {
+  content: "Likes";
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: #ccc;
+}
+
+.photos::before {
+  content: "Photos";
+  position: absolute;
+  top: 100%;
+  left: -3px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: #ccc;
+}
